@@ -32,49 +32,52 @@
 </head>
 <script language="javascript">
 	const data = {
-		ab0_9: ["Amber", "AB0.9", 0.9375, 700, 640, 360, 600, 337.5, 55, 8.5, 150, 75],
-		ab1_2: ["Amber", "AB1.2", 1.25, 800, 480, 270, 600, 337.5, 55, 8.5, 170, 85],
-		ab1_5: ["Amber", "AB1.5", 1.5625, 800, 384, 216, 600, 337.5, 55, 8.5, 180, 90],
-		ab1_8: ["Amber", "AB1.8", 1.875, 800, 320, 180, 600, 337.5, 55, 8.5, 170, 85],
-		ja2_6: ["Jasper", "JA2.6", 2.604, 1500, 192, 192, 500, 500, 60, 7.5, 190, 95],
-		ja3_9: ["Jasper", "JA3.9", 3.906, 1400, 128, 128, 500, 500, 60, 7.5, 160, 80],
-		ja5_2: ["Jasper", "JA5.2", 5.208, 1400, 96, 96, 500, 500, 60, 7.5, 160, 80],
-		sp1_5: ["Sapphire", "SP1.5", 1.54, 800, 320, 180, 494.4, 278.1, 86, 4.5, 100, 50],
-		dm2_6: ["Diamond", "DM2.6", 2.6, 1500, 192, 192, 500, 500, 80, 5.76, 180, 90],
-		dm3_9: ["Diamond", "DM3.9", 3.906, 1500, 128, 128, 500, 500, 80, 5.76, 150, 75],
-		bm2_matte: ["Black Marble", "BM2-PC Matte", 2.88, 2000, 208, 208, 600, 600, 103, 13.1, 270, 135],
-		bm4_mirror: ["Black Marble", "BM4-Mirror", 4.76, 1300, 128, 128, 609.6, 609.6, 130, 21.65, 280, 140],
-		bm4_glass: ["Black Marble", "BM4-Glass", 4.76, 1200, 128, 128, 609.6, 609.6, 130, 21.65, 280, 140],
-		bm4_matte: ["Black Marble", "BM4-Matte", 4.76, 2000, 128, 128, 609.6, 609.6, 130, 16, 280, 140],
-		bm5_matte: ["Black Marble", "BM5-Matte", 5.7692, 2000, 104, 104, 600, 600, 103, 13.5, 270, 135],
-		bm5_glass: ["Black Marble", "BM5-Glass", 5.7692, 800, 104, 104, 600, 600, 103, 18.3, 270, 135],
-		bm15: ["Black Marble", "BM15", 15.24, 1500, 40, 40, 609.6, 609.6, 130, 19.53, 250, 125],
-		bo2: ["Black OnyX", "BO2", 2.84, 1800, 176, 176, 500, 500, 90, 9.35, 160, 80],
-		bo3: ["Black OnyX", "BO3", 3.47, 1500, 144, 144, 500, 500, 90, 9.35, 170, 85],
-		bp2: ["Black Pearl", "BP2", 2.84, 1500, 176, 176, 500, 500, 90, 9.35, 160, 80],
-		bp3: ["Black Pearl", "BP3", 3.91, 1500, 128, 128, 500, 500, 90, 8.7, 170, 85],
+		//const dm2_6= {0line:"Diamond", 1name:"DM2.6", 2pitch:2.6, 3brightness:1500, 4hpx:192, 5vpx:192, 6w:500, 7h:500, 8d:80, 9weight:5.76, 10maxpower:180, 11avgpower:90, 12scan, 13freshrate:, 14grayscale};
+		ab0_9: ["Amber", "AB0.9", 0.9375, 700, 640, 360, 600, 337.5, 55, 8.5, 150, 75, 30, 1920, 16],
+		ab1_2: ["Amber", "AB1.2", 1.25, 800, 480, 270, 600, 337.5, 55, 8.5, 170, 85, 27, 3840, 16],
+		ab1_5: ["Amber", "AB1.5", 1.5625, 800, 384, 216, 600, 337.5, 55, 8.5, 180, 90, 18, 3840, 16],
+		ab1_8: ["Amber", "AB1.8", 1.875, 800, 320, 180, 600, 337.5, 55, 8.5, 170, 85, 30, 3840, 16],
+		ja2_6: ["Jasper", "JA2.6", 2.604, 1500, 192, 192, 500, 500, 60, 7.5, 190, 95, 16, 3840, 16],
+		ja3_9: ["Jasper", "JA3.9", 3.906, 1400, 128, 128, 500, 500, 60, 7.5, 160, 80, 16, 3840, 16],
+		ja5_2: ["Jasper", "JA5.2", 5.208, 1400, 96, 96, 500, 500, 60, 7.5, 160, 80, 6, 3840, 16],
+		sp1_5: ["Sapphire", "SP1.5", 1.54, 800, 320, 180, 494.4, 278.1, 86, 4.5, 100, 50, 20, 3840, 16],
+		dm2_6: ["Diamond", "DM2.6", 2.6, 1500, 192, 192, 500, 500, 80, 5.76, 180, 90, 16, 1920, 16],
+		dm3_9: ["Diamond", "DM3.9", 3.906, 1500, 128, 128, 500, 500, 80, 5.76, 150, 75, 16, 1920, 16],
+		//bm2_matte: ["Black Marble", "BM2-PC Matte", 2.88, 2000, 208, 208, 600, 600, 103, 13.1, 270, 135],
+		bm4_mirror: ["Black Marble", "BM4-Mirror", 4.76, 1300, 128, 128, 609.6, 609.6, 130, 21.65, 280, 140, 8, 1920, 16],
+		bm4_glass: ["Black Marble", "BM4-Glass", 4.76, 1200, 128, 128, 609.6, 609.6, 130, 21.65, 280, 140, 8, 1920, 16],
+		bm4_matte: ["Black Marble", "BM4-Matte", 4.76, 2000, 128, 128, 609.6, 609.6, 130, 16, 280, 140, 8, 1920, 16],
+		bm5_matte: ["Black Marble", "BM5-Matte", 5.7692, 2000, 104, 104, 600, 600, 103, 13.5, 270, 135, 4, 1920, 16],
+		bm5_glass: ["Black Marble", "BM5-Glass", 5.7692, 800, 104, 104, 600, 600, 103, 18.3, 270, 135, 4, 1920, 16],
+		//bm15: ["Black Marble", "BM15", 15.24, 1500, 40, 40, 609.6, 609.6, 130, 19.53, 250, 125],
+		bo2: ["Black OnyX", "BO2", 2.84, 1800, 176, 176, 500, 500, 90, 9.35, 160, 80, 11, 1920, 16],
+		bo3: ["Black OnyX", "BO3", 3.47, 1500, 144, 144, 500, 500, 90, 9.35, 170, 85, 11, 1920, 16],
+		bp2: ["Black Pearl", "BP2", 2.84, 1500, 176, 176, 500, 500, 90, 9.35, 160, 80, 11, 3840, 16],
+		bp3: ["Black Pearl", "BP3", 3.91, 1500, 128, 128, 500, 500, 90, 8.7, 170, 85, 16, 3840, 16],
 		//bp5: ["Black Pearl", "BP5", 5.21, 1500, 96, 96, 500, 500, 90, 8.7, 160, 80],
-		rb2_3: ["Ruby", "RB2.3", 2.31, 1500, 216, 216, 500, 500, 68, 8.16, 180, 90],
-		rbc2_3: ["Ruby-C", "RB-C2.3", 2.31, 1500, 216, 216, 500, 500, 67, 8, 160, 80],
-		bq3_9: ["Black Quartz", "BQ3.9", 3.9, 5000, 128, 256, 500, 1000, 0, 16.7, 370, 190],
-		bq4_6_b: ["Black Quartz", "BQ4.6-Black", 4.6, 5000, 108, 216, 500, 1000, 0, 16.7, 370, 190],
-		bq4_6_w: ["Black Quartz", "BQ4.6-White", 4.6, 6000, 108, 216, 500, 1000, 0, 16.7, 370, 190],
-		cb3: ["Carbon", "CB3", 3.75, 1500, 160, 320, 600, 1200, 77, 13.2, 540, 270],
-		cb3_h: ["Carbon", "CB3-Half", 3.75, 1500, 160, 160, 600, 600, 77, 7.2, 260, 130],
-		cb5_w: ["Carbon", "CB5-White", 5.77, 6000, 104, 208, 600, 1200, 77, 13.85, 500, 250],
-		cb5_b: ["Carbon", "CB5-Black", 5.77, 4500, 104, 208, 600, 1200, 77, 13.85, 650, 325],
-		cb5_w_h: ["Carbon", "CB5-White-Half", 5.77, 6000, 104, 104, 600, 600, 77, 9.8, 250, 125],
-		cb5_b_h: ["Carbon", "CB5-Black-Half", 5.77, 4500, 104, 104, 600, 600, 77, 9.8, 325, 162],
-		cb8_t: ["Carbon", "CB8-Transparent", 8.33, 5000, 72, 144, 600, 1200, 70, 9.8, 430, 215],
-		cb8_t_h: ["Carbon", "CB8-Transparent-Half", 8.33, 5000, 72, 72, 600, 600, 70, 6, 160, 80],
-		cb8_s: ["Carbon", "CB8-Solid", 8.33, 5000, 72, 144, 600, 1200, 70, 12.68, 430, 215],
-		cb8_s_h: ["Carbon", "CB8-Solid-Half", 8.33, 5000, 72, 72, 600, 600, 70, 7.05, 160, 80],
-		v8s: ["Vanish", "V8S", 8.94, 3500, 112, 112, 1000, 1000, 67, 8.9, 435, 220],
-		v8t: ["Vanish", "V8T", 8.94, 4000, 112, 112, 1000, 1000, 95, 16.5, 480, 240],
-		v8: ["Vanish", "V8", 8.94, 2500, 112, 56, 1000, 500, 35, 6.5, 320, 160],
-		v18: ["Vanish", "V18", 18.75, 5000, 64, 64, 1200, 1200, 95, 21.2, 600, 300],
-		v25_580: ["Vanish", "V25-580W", 25, 3500, 48, 48, 1200, 1200, 95, 20.5, 580, 290],
-		v25_640: ["Vanish", "V25-640W", 25, 4500, 48, 48, 1200, 1200, 95, 20.5, 640, 320],
+		rb2_3: ["Ruby", "RB2.3", 2.31, 1500, 216, 216, 500, 500, 68, 8.16, 180, 90, 12, 3840, 14],
+		//rbc2_3: ["Ruby-C", "RB-C2.3", 2.31, 1500, 216, 216, 500, 500, 67, 8, 160, 80],
+		bq3_9: ["Black Quartz", "BQ3.9", 3.9, 5000, 128, 256, 500, 1000, 0, 17.8, 370, 190, 8, 3840, 16],
+		bq3_9_h: ["Black Quartz", "BQ3.9-Half", 3.9, 5000, 128, 128, 500, 500, 0, 9.8, 190, 100, 8, 3840, 16],
+		bq4_6_b: ["Black Quartz", "BQ4.6-Black", 4.6, 5000, 108, 216, 500, 1000, 0, 17.8, 370, 190, 8, 7680, 16],
+		//bq4_6_w: ["Black Quartz", "BQ4.6-White", 4.6, 6000, 108, 216, 500, 1000, 0, 16.7, 370, 190],
+		bq4_6_b_h: ["Black Quartz", "BQ4.6-Black-Half", 4.6, 5000, 108, 108, 500, 500, 0, 9.8, 190, 100, 8, 7680, 16],
+		cb3: ["Carbon", "CB3", 3.75, 1500, 160, 320, 600, 1200, 77, 13.2, 540, 270, 16, 1920, 16],
+		cb3_h: ["Carbon", "CB3-Half", 3.75, 1500, 160, 160, 600, 600, 77, 7.2, 260, 130, 16, 1920, 16],
+		cb5_w: ["Carbon", "CB5-White", 5.77, 6000, 104, 208, 600, 1200, 77, 13.85, 500, 250, 4, 3840, 16],
+		cb5_b: ["Carbon", "CB5-Black", 5.77, 4500, 104, 208, 600, 1200, 77, 13.85, 650, 325, 4, 3840, 16],
+		cb5_w_h: ["Carbon", "CB5-White-Half", 5.77, 6000, 104, 104, 600, 600, 77, 9.8, 250, 125, 4, 3840, 16],
+		cb5_b_h: ["Carbon", "CB5-Black-Half", 5.77, 4500, 104, 104, 600, 600, 77, 9.8, 325, 162, 4, 3840, 16],
+		cb8_t: ["Carbon", "CB8-Transparent", 8.33, 5000, 72, 144, 600, 1200, 70, 9.8, 430, 215, 6, 2880, 16],
+		cb8_t_h: ["Carbon", "CB8-Transparent-Half", 8.33, 5000, 72, 72, 600, 600, 70, 6, 160, 80, 6, 2880, 16],
+		cb8_s: ["Carbon", "CB8-Solid", 8.33, 5000, 72, 144, 600, 1200, 70, 12.68, 430, 215, 6, 2880, 16],
+		cb8_s_h: ["Carbon", "CB8-Solid-Half", 8.33, 5000, 72, 72, 600, 600, 70, 7.05, 160, 80, 6, 2880, 16],
+		v8: ["Vanish", "V8", 8.94, 2500, 112, 56, 1000, 500, 35, 6.5, 320, 160, 4, 6576, 16],
+		v8s: ["Vanish", "V8S", 8.94, 3500, 112, 112, 1000, 1000, 67, 8.9, 435, 220, 4, 3840, 16],
+		v8t: ["Vanish", "V8T", 8.94, 4000, 112, 112, 1000, 1000, 95, 16.5, 480, 240, 4, 3840, 16],
+		v18: ["Vanish", "V18", 18.75, 5000, 64, 64, 1200, 1200, 95, 21.2, 600, 300, 0, 4000, 16],
+		v25_580: ["Vanish", "V25-580W", 25, 3500, 48, 48, 1200, 1200, 95, 20.5, 580, 290, 0, 4000, 16],
+		v25_640: ["Vanish", "V25-640W", 25, 4500, 48, 48, 1200, 1200, 95, 20.5, 640, 320, 0, 4000, 16],
 		//const dm2_6= {0line:"Diamond", 1name:"DM2.6", 2pitch:2.6, 3brightness:1500, 4hpx:192, 5vpx:192, 6w:500, 7h:500, 8d:80, 9weight:5.76, 10maxpower:180, 11avgpower:90};
 
 		mvr8: ["NA", "NA", "NA", "NA", "NA"],
@@ -240,6 +243,28 @@
 		}
 	}
 
+	function MVR_12_60_HELIOS4K() {
+		document.getElementById("brand_select").options[0].selected = true;
+		document.getElementById("bpc_select").options[0].selected = true;
+		document.getElementById("frame_rate_select").options[0].selected = true;
+		document.getElementById("processor_select").options[0].selected = true;
+		calculate();
+	}
+	function Brompton_12_60_SX40() {
+		document.getElementById("brand_select").options[1].selected = true;
+		document.getElementById("bpc_select").options[0].selected = true;
+		document.getElementById("frame_rate_select").options[0].selected = true;
+		document.getElementById("processor_select").options[2].selected = true;
+		calculate();
+	}
+	function EVISION_8_60_eV4() {
+		document.getElementById("brand_select").options[2].selected = true;
+		document.getElementById("bpc_select").options[2].selected = true;
+		document.getElementById("frame_rate_select").options[0].selected = true;
+		document.getElementById("processor_select").options[5].selected = true;
+		calculate();
+	}
+
 
 	function doWork() {
 		//inputs. selections.
@@ -274,6 +299,7 @@
 		document.getElementById('fixture_weight').value = Rround(data[js_fixture][9]);
 		document.getElementById('fixture_maxpower').value = Rround(data[js_fixture][10]) + " | " + Rround(data[js_fixture][11]);
 		//document.getElementById('fixture_avgpower').value = Rround(data[js_fixture][11]);
+		document.getElementById('fixture_scan').value = data[js_fixture][12] + " | " + data[js_fixture][13]+ " | " + data[js_fixture][14];
 
 		//screen outputs
 		document.getElementById('screen_qty').value = js_width * js_height + " (" + js_width + " x " + js_height + ")";
@@ -420,7 +446,7 @@
 </script>
 
 <body>
-	<h3 id="calc">Data Calculator for Processing Platforms v1.9 (Reference Only!)</h3>
+	<h3 id="calc">Data Calculator for Processing Platforms v2.0 (Reference Only!)</h3>
 
 	<!--<h4 id="calc_settings">Enter project settings</h4>-->
 
@@ -503,23 +529,25 @@
 					<option value="sp1_5" selected>SP1.5</option>
 					<option value="dm2_6">DM2.6</option>
 					<option value="dm3_9">DM3.9</option>
-					<option value="bm2_matte">BM2-PC Matte</option>
+					<!--<option value="bm2_matte">BM2-PC Matte</option>-->
 					<option value="bm4_mirror">BM4-Mirror</option>
 					<option value="bm4_glass">BM4-Glass</option>
 					<option value="bm4_matte">BM4-Matte</option>
 					<option value="bm5_matte">BM5-Matte</option>
 					<option value="bm5_glass">BM5-Glass</option>
-					<option value="bm15">BM15</option>
+					<!--<option value="bm15">BM15</option>-->
 					<option value="bo2">BO2</option>
 					<option value="bo3">BO3</option>
 					<option value="bp2">BP2</option>
 					<option value="bp3">BP3</option>
 					<option value="bp5" hidden>BP5</option>
 					<option value="rb2_3">RB2.3</option>
-					<option value="rbc2_3">RB-C2.3</option>
+					<!-- <option value="rbc2_3">RB-C2.3</option> -->
 					<option value="bq3_9">BQ3.9</option>
+					<option value="bq3_9_h">BQ3.9-Half</option>
 					<option value="bq4_6_b">BQ4.6-Black</option>
-					<option value="bq4_6_w">BQ4.6-White</option>
+					<!--<option value="bq4_6_w">BQ4.6-White</option> -->
+					<option value="bq4_6_b_h">BQ4.6-Black-Half</option>
 					<option value="cb3">CB3</option>
 					<option value="cb3_h">CB3-Half</option>
 					<option value="cb5_w">CB5-White</option>
@@ -530,9 +558,9 @@
 					<option value="cb8_t_h">CB8-T-Half</option>
 					<option value="cb8_s">CB8-Solid</option>
 					<option value="cb8_s_h">CB8-Solid-Half</option>
+					<option value="v8">V8</option>
 					<option value="v8s">V8S</option>
 					<option value="v8t">V8T</option>
-					<option value="v8">V8</option>
 					<option value="v18">V18</option>
 					<option value="v25_580">V25-580W</option>
 					<option value="v25_640">V25-640W</option>
@@ -556,6 +584,10 @@
 
 	<button onclick="calculate()">Calculate</button>
 	<input type="reset" value="Reset" onclick="Reset()">
+	&nbsp;&nbsp;&nbsp;
+	<button onclick="MVR_12_60_HELIOS4K()">MVR-12-60-HELIOS4K/8K</button>
+	<button onclick="Brompton_12_60_SX40()">Brompton-12-60-SX40</button>
+	<button onclick="EVISION_8_60_eV4()">EVISION-8-60-eV4</button>
 
 
 <br><br>
@@ -616,6 +648,11 @@
 							<td><input type="text" id="fixture_avgpower" value="Selet a fixture" size="17" readonly />
 							</td>
 						</tr>-->
+						<tr>
+							<td>Multiplexing, Refresh Rate & Gray Scale:</td>
+							<td><input type="text" id="fixture_scan" value="Selet a fixture" size="19" readonly />
+							</td>
+						</tr>
 					</table>
 
 				</td>
@@ -760,6 +797,10 @@
 		</table>
 
 	</form>
+	<p>Panel details from <i>[ROE Visual] Product Specifications - 16 Dec, 2020</i>. Product Specifications file internal ONLY.<br>
+		Details correspond with data from <a href="https://www.roevisual.com/">ROE website</a>.
+	</p>
+	
 
 	<div class="padding">&nbsp;</div>
 </body>
@@ -771,4 +812,5 @@
 	1.0, 2020-04-27, rony, https://www.cnblogs.com/simba-lkj/p/6014838.html, [ROE Visual] Product Specifications Mar. 18, 2020.xlsx.
 	1.1, 2020-05-20, rony, change layout
 	1.2, 2020-05-20, rony, hide BP5, from new SPEC.
+	2.0, 2020-01-11, rony, update scan/refresh rate/grayscale. delete unreleased panel types. see backup file for undeleted version.
 -->
