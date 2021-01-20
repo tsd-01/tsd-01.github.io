@@ -43,14 +43,15 @@
 		sp1_5: ["Sapphire", "SP1.5", 1.54, 800, 320, 180, 494.4, 278.1, 86, 4.5, 100, 50, 20, 3840, 16],
 		dm2_6: ["Diamond", "DM2.6", 2.6, 1500, 192, 192, 500, 500, 80, 5.76, 180, 90, 16, 1920, 16],
 		dm3_9: ["Diamond", "DM3.9", 3.906, 1500, 128, 128, 500, 500, 80, 5.76, 150, 75, 16, 1920, 16],
-		bm4_mirror: ["Black Marble", "BM4-Mirror", 4.76, 1300, 128, 128, 609.6, 609.6, 130, 21.65, 280, 140, 8, 1920, 16],
+		//bm4_mirror: ["Black Marble", "BM4-Mirror", 4.76, 1300, 128, 128, 609.6, 609.6, 130, 21.65, 280, 140, 8, 1920, 16],
 		bm4_glass: ["Black Marble", "BM4-Glass", 4.76, 1200, 128, 128, 609.6, 609.6, 130, 21.65, 280, 140, 8, 1920, 16],
 		bm4_matte: ["Black Marble", "BM4-Matte", 4.76, 2000, 128, 128, 609.6, 609.6, 130, 16, 280, 140, 8, 1920, 16],
 		bm5_matte: ["Black Marble", "BM5-Matte", 5.7692, 2000, 104, 104, 600, 600, 103, 13.5, 270, 135, 4, 1920, 16],
 		bm5_glass: ["Black Marble", "BM5-Glass", 5.7692, 800, 104, 104, 600, 600, 103, 18.3, 270, 135, 4, 1920, 16],
-		bo2: ["Black OnyX", "BO2", 2.84, 1800, 176, 176, 500, 500, 90, 9.35, 160, 80, 11, 1920, 16],
+		//bo2: ["Black OnyX", "BO2", 2.84, 1800, 176, 176, 500, 500, 90, 9.35, 160, 80, 11, 1920, 16],
 		bo3: ["Black OnyX", "BO3", 3.47, 1500, 144, 144, 500, 500, 90, 9.35, 170, 85, 11, 1920, 16],
 		bp2: ["Black Pearl", "BP2", 2.84, 1500, 176, 176, 500, 500, 90, 9.35, 160, 80, 11, 3840, 16],
+		bp2v2: ["Black Pearl", "BP2 V2", 2.84, 1500, 176, 176, 500, 500, 90, 9.35, 160, 80, 8, 3840, 16],
 		bp3: ["Black Pearl", "BP3", 3.91, 1500, 128, 128, 500, 500, 90, 8.7, 170, 85, 16, 3840, 16],
 		rb2_3: ["Ruby", "RB2.3", 2.31, 1500, 216, 216, 500, 500, 68, 8.16, 180, 90, 12, 3840, 14],
 		bq3_9: ["Black Quartz", "BQ3.9", 3.9, 5000, 128, 256, 500, 1000, 0, 17.8, 370, 190, 8, 3840, 16],
@@ -73,7 +74,7 @@
 		v18: ["Vanish", "V18", 18.75, 5000, 64, 64, 1200, 1200, 95, 21.2, 600, 300, 0, 4000, 16],
 		v25_580: ["Vanish", "V25-580W", 25, 3500, 48, 48, 1200, 1200, 95, 20.5, 580, 290, 0, 4000, 16],
 		v25_640: ["Vanish", "V25-640W", 25, 4500, 48, 48, 1200, 1200, 95, 20.5, 640, 320, 0, 4000, 16],
-		//const dm2_6= {0line:"Diamond", 1name:"DM2.6", 2pitch:2.6, 3brightness:1500, 4hpx:192, 5vpx:192, 6w:500, 7h:500, 8d:80, 9weight:5.76, 10maxpower:180, 11avgpower:90};
+		//const dm2_6= {0line:"Diamond", 1name:"DM2.6", 2pitch:2.6, 3brightness:1500, 4hpx:192, 5vpx:192, 6w:500, 7h:500, 8d:80, 9weight:5.76, 10maxpower:180, 11avgpower:90, 12scan, 13freshrate:, 14grayscale};
 
 		mvr8: ["NA", "NA", "NA", "NA", "NA"],
 		mvr10: [510000, "NA", "NA", "NA", "NA"],
@@ -91,7 +92,8 @@
 	};
 
 	const processor_data = {
-		m4k: [8, 34000000, 8192, 4320, 9],
+		m4k: [3, 8847360, 4096, 2160, 9],
+		m8k: [8, 34000000, 8192, 4320, 9],
 		//User Guid Doc. v0.15, HELIOS v20.01.0.20551, Feb 17, 2020
 		mjr: [8, 34000000, 8192, 4320, 0],
 		bsx40: [4, 8847360, 4096, 4095, 10],
@@ -441,7 +443,7 @@
 </script>
 
 <body>
-	<h3 id="calc">Data Calculator for Processing Platforms v2.0 (Reference Only!)</h3>
+	<h3 id="calc">Data Calculator for Processing Platforms v2.1 (Reference Only!)</h3>
 
 	<!--<h4 id="calc_settings">Enter project settings</h4>-->
 
@@ -498,7 +500,8 @@
 			<td>
 
 				<select id="processor_select" size="1" onclick="calculate()">
-					<option value="m4k">HELIOS 4K/8K</option>
+					<option value="m4k">HELIOS 4K</option>
+					<option value="m8k">HELIOS 8K</option>
 					<option value="mjr">HELIOS JR</option>
 					<option value="bsx40">Tessera SX40</option>
 					<option value="bs8">Tessera S8</option>
@@ -524,14 +527,13 @@
 					<option value="sp1_5">SP1.5</option>
 					<option value="dm2_6">DM2.6</option>
 					<option value="dm3_9">DM3.9</option>
-					<option value="bm4_mirror">BM4-Mirror</option>
 					<option value="bm4_glass">BM4-Glass</option>
 					<option value="bm4_matte">BM4-Matte</option>
 					<option value="bm5_matte">BM5-Matte</option>
 					<option value="bm5_glass">BM5-Glass</option>
-					<option value="bo2">BO2</option>
 					<option value="bo3">BO3</option>
 					<option value="bp2" selected>BP2</option>
+					<option value="bp2v2" selected>BP2 V2</option>
 					<option value="bp3">BP3</option>
 					<option value="bp5" hidden>BP5</option>
 					<option value="rb2_3">RB2.3</option>
@@ -576,7 +578,7 @@
 	<button onclick="calculate()">Calculate</button>
 	<input type="reset" value="Reset" onclick="Reset()">
 	&nbsp;&nbsp;&nbsp;
-	<button onclick="MVR_12_60_HELIOS4K()">MVR-12-60-HELIOS4K/8K</button>
+	<button onclick="MVR_12_60_HELIOS4K()">MVR-12-60-HELIOS4K</button>
 	<button onclick="Brompton_12_60_SX40()">Brompton-12-60-SX40</button>
 	<button onclick="EVISION_8_60_eV4()">EVISION-8-60-eV4</button>
 
@@ -804,4 +806,5 @@
 	1.1, 2020-05-20, rony, change layout
 	1.2, 2020-05-20, rony, hide BP5, from new SPEC.
 	2.0, 2020-01-11, rony, update scan/refresh rate/grayscale. delete unreleased panel types. see backup file for undeleted version.
+	2.1, 2021-01-20, rony, seperate HELIOS 4K/8K on calculation. add bp2v2. delete bo2. delete bm4_mirror.
 -->
