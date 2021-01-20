@@ -191,9 +191,20 @@
 				for (var i = 1; i < frame_rate_select.length; i++) {
 					frame_rate_select[i].disabled = true;
 				}
-				for (var i = 2; i < processor_select.length; i++) {
-					processor_select[i].disabled = true;
-				}
+				document.getElementById("processor_select").options[0].disabled = false;
+				document.getElementById("processor_select").options[1].disabled = false;
+				document.getElementById("processor_select").options[2].disabled = false;
+				document.getElementById("processor_select").options[3].disabled = true;
+				document.getElementById("processor_select").options[4].disabled = true;
+				document.getElementById("processor_select").options[5].disabled = true;
+				document.getElementById("processor_select").options[6].disabled = true;
+				document.getElementById("processor_select").options[7].disabled = true;
+				document.getElementById("processor_select").options[8].disabled = true;
+				document.getElementById("processor_select").options[9].disabled = true;
+				document.getElementById("processor_select").options[10].disabled = true;
+				//for (var i = 3; i < processor_select.length; i++) {
+				//	processor_select[i].disabled = true;
+				//}
 				//document.getElementById("bpc_select").options[0].selected = true;
 				//document.getElementById("frame_rate_select").options[0].selected = true;
 				//document.getElementById("processor_select").options[0].selected = true;
@@ -201,9 +212,18 @@
 			case "brompton":
 				document.getElementById("processor_select").options[0].disabled = true;
 				document.getElementById("processor_select").options[1].disabled = true;
-				for (var i = 5; i < processor_select.length; i++) {
-					processor_select[i].disabled = true;
-				}
+				document.getElementById("processor_select").options[2].disabled = true;
+				document.getElementById("processor_select").options[3].disabled = false;
+				document.getElementById("processor_select").options[4].disabled = false;
+				document.getElementById("processor_select").options[5].disabled = false;
+				document.getElementById("processor_select").options[6].disabled = true;
+				document.getElementById("processor_select").options[7].disabled = true;
+				document.getElementById("processor_select").options[8].disabled = true;
+				document.getElementById("processor_select").options[9].disabled = true;
+				document.getElementById("processor_select").options[10].disabled = true;
+				//for (var i = 6; i < processor_select.length; i++) {
+				//	processor_select[i].disabled = true;
+				//}
 				//document.getElementById("bpc_select").options[0].selected = true;
 				//document.getElementById("frame_rate_select").options[0].selected = true;
 				//document.getElementById("processor_select").options[2].selected = true;
@@ -213,11 +233,22 @@
 				for (var i = 1; i < frame_rate_select.length; i++) {
 					frame_rate_select[i].disabled = true;
 				}
-				for (var i = 0; i < processor_select.length; i++) {
-					processor_select[i].disabled = true;
-				}
-				document.getElementById("processor_select").options[5].disabled = false;
+				document.getElementById("processor_select").options[0].disabled = true;
+				document.getElementById("processor_select").options[1].disabled = true;
+				document.getElementById("processor_select").options[2].disabled = true;
+				document.getElementById("processor_select").options[3].disabled = true;
+				document.getElementById("processor_select").options[4].disabled = true;
+				document.getElementById("processor_select").options[5].disabled = true;
 				document.getElementById("processor_select").options[6].disabled = false;
+				document.getElementById("processor_select").options[7].disabled = false;
+				document.getElementById("processor_select").options[8].disabled = true;
+				document.getElementById("processor_select").options[9].disabled = true;
+				document.getElementById("processor_select").options[10].disabled = true;
+				//for (var i = 0; i < processor_select.length; i++) {
+				//	processor_select[i].disabled = true;
+				//}
+				//document.getElementById("processor_select").options[5].disabled = false;
+				//document.getElementById("processor_select").options[6].disabled = false;
 				//document.getElementById("bpc_select").options[2].selected = true;
 				//document.getElementById("frame_rate_select").options[0].selected = true;
 				//document.getElementById("processor_select").options[5].selected = true;
@@ -227,11 +258,22 @@
 				for (var i = 1; i < frame_rate_select.length; i++) {
 					frame_rate_select[i].disabled = true;
 				}
-				for (var i = 0; i < processor_select.length; i++) {
-					processor_select[i].disabled = true;
-				}
-				document.getElementById("processor_select").options[7].disabled = false;
+				document.getElementById("processor_select").options[0].disabled = true;
+				document.getElementById("processor_select").options[1].disabled = true;
+				document.getElementById("processor_select").options[2].disabled = true;
+				document.getElementById("processor_select").options[3].disabled = true;
+				document.getElementById("processor_select").options[4].disabled = true;
+				document.getElementById("processor_select").options[5].disabled = true;
+				document.getElementById("processor_select").options[6].disabled = true;
+				document.getElementById("processor_select").options[7].disabled = true;
 				document.getElementById("processor_select").options[8].disabled = false;
+				document.getElementById("processor_select").options[9].disabled = false;
+				document.getElementById("processor_select").options[10].disabled = true;
+				//for (var i = 0; i < processor_select.length; i++) {
+				//	processor_select[i].disabled = true;
+				//}
+				//document.getElementById("processor_select").options[7].disabled = false;
+				//document.getElementById("processor_select").options[8].disabled = false;
 				//document.getElementById("bpc_select").options[2].selected = true;
 				//document.getElementById("frame_rate_select").options[0].selected = true;
 				//document.getElementById("processor_select").options[7].selected = true;
@@ -251,14 +293,14 @@
 		document.getElementById("brand_select").options[1].selected = true;
 		document.getElementById("bpc_select").options[0].selected = true;
 		document.getElementById("frame_rate_select").options[0].selected = true;
-		document.getElementById("processor_select").options[2].selected = true;
+		document.getElementById("processor_select").options[3].selected = true;
 		calculate();
 	}
 	function EVISION_8_60_eV4() {
 		document.getElementById("brand_select").options[2].selected = true;
 		document.getElementById("bpc_select").options[2].selected = true;
 		document.getElementById("frame_rate_select").options[0].selected = true;
-		document.getElementById("processor_select").options[5].selected = true;
+		document.getElementById("processor_select").options[6].selected = true;
 		calculate();
 	}
 
